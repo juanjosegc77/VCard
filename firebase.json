@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/vcard",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

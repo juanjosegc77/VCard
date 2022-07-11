@@ -33,6 +33,7 @@ section {
 
 // ********** PROFILE **********
 
+/*
 .profile::before {
     background-image: url("/assets/images/bg01.jpg");
     background-size: 100% 320px;
@@ -47,11 +48,14 @@ section {
     top: 0px;
     z-index: -1;
 }
+*/
 
 .profile {
+    background-image: linear-gradient(to right, rgb(247, 135, 101), rgb(253, 166, 140));
     color: $color-white;
     height: 320px;
     text-align: center;
+    width: 100vw !important;
 }
 
 .profile .brand {
@@ -155,6 +159,10 @@ section {
 
 .card-portfolio {
     z-index: -2;
+}
+
+.portfolio-row {
+    margin-bottom: 20px;
 }
 
 .portfolio-col {

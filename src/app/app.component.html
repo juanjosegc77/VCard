@@ -1,14 +1,13 @@
 <!-- PAGE CONTENT -->
-<div class="container">
 
   <!-- PROFILE -->
   <div class="profile">
     <div class="brand">VCard</div>
     <div class="title">Juan José Guzmán</div>
-    <div class="position">Hybrid apps Developer</div>
+    <div class="position">Java Fullstack and Mobile Developer</div>
     <div class="info-buttons">
-      <button class="button-info">Hire Me</button>
-      <button class="button-info">Resume</button>
+      <button class="button-info fa fa-download"
+      (click)="downloadResume()">&nbsp; Resume</button>
     </div>
     <br>
     <div class="social-buttons">
@@ -18,43 +17,32 @@
     </div>
   </div>
 
+<div class="container">
+
   <!-- SECTION ABOUT ME -->
   <section id="about">
     <div class="section-title">About me</div>
     <div class="card">
       <div class="card-body">
-        <p>Hello! I am Juan José Guzmán. Hybrid apps developer.
+        <p>
+          <strong>Hello! I am Juan José Guzmán. Java Fullstack and Mobile Developer.</strong>
           <button class="button-more" (click)="showMoreAboutMe()">{{show_option}}</button>
         </p>
         <div class="more-about-me" *ngIf="show_more_about_me">
           <p>
-            A lo largo de los años, he trabajado en proyectos a diferentes niveles de la
-            arquitectura de computadoras, utilizando recursos que van desde el bajo hasta
-            el alto nivel de integración. Si bien, las herramientas utilizadas tiene
-            particularidades, el enfoque que ha predominado es crear una solución que
-            mejore una actividad humana, utilizando algún recurso computacional.
+            My personal interest focuses on the development of computational 
+            solutions accessible to the largest number of possible users. 
+            Seeking this goal, I have focused on using tools that contribute 
+            to cross-platform development, such as Angular, Ionic, Java, 
+            MySQL, NoSQL and cloud services, among others.
           </p>
           <p>
-            Por otra parte, mi sueño personal se ha concentrado y definido en crear
-            algún tipo de recurso que ayude al desarrollo integral de cualquier
-            individuo y tantos como sea posible. Y es aquí donde mi propio desarrollo
-            personal encuentra un objeto y un objetivo.
+            I am passionate about thinking that people benefit from using 
+            my developments and that I dedicate myself to a profession in 
+            which something new is always learned.
           </p>
           <p>
-            <strong>
-              Crear soluciones computacionales utilizando la metodología de desarrollo
-              híbrida para conseguir un beneficio incluyente.
-            </strong>
-          </p>
-          <p>
-            Es por ello que el desarrollo de aplicaciones híbridas se ha convertido
-            en mi área de especialización, en la cual sigo aprendiendo día con día.
-          </p>
-          <p>
-            Mi enfoque consiste en entender el problema y utilizar los recursos
-            disponibles para desarrollar una solución que permita a una
-            gran cantidad de usuarios beneficiarse con dicho recurso, donde lo
-            verdaderamente importante sea el usuario y no los recursos.
+            "Be the change you want to see in the world".
           </p>
         </div>
       </div>
@@ -80,7 +68,7 @@
         </div>
         <div class="row mt-3">
           <div class="col-sm-4 col-info-label"><strong class="text-uppercase">Language:</strong></div>
-          <div class="col-sm-8 col-info-value">Spanish (native), English (fluenty), Russian (basic)</div>
+          <div class="col-sm-8 col-info-value">Spanish (native), English (proficient), Russian (basic)</div>
         </div>
       </div>
     </div>
@@ -98,7 +86,9 @@
         <p class="skill-description">Google Cloud services, Git, SCSS, Inkscape, MATLAB, VHDL, LabVIEW, Multisim,
           Mathematica, \LaTeX, OpenOffice, MS Office.</p>
         <p class="skill-title">Basic level</p>
-        <p class="skill-description">Docker, Kubernetes, Django, R, C, VBA, AutoCAD, FreeCAD, SolidWorks.</p>
+        <p class="skill-description">Django, R, C, VBA, AutoCAD, FreeCAD, SolidWorks.</p>
+        <p class="skill-title">Learning</p>
+        <p class="skill-description">Docker, Kubernetes.</p>
       </div>
     </div>
   </section>
@@ -106,36 +96,61 @@
   <!-- SECTION PORTFOLIO -->
   <section id="portfolio" class="portfolio">
     <div class="section-title">Portafolio</div>
-    <div class="card card-portfolio">
-      <div class="card-body">
-        <div class="row portfolio-row">
-          <div class="col portfolio-col">
-            <div class="portfolio-wrap">
-              <img src="assets/images/tlatoa.png" alt="Tlatoa">
-              <div class="portfolio-info">
-                Tlatoa
-              </div>
-              <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.developersmix.tlatoa">
-                  <i class="fa fa-android"></i>
-                </a>
-                <a [routerLink]="'/project/tlatoa-description'"><i class="fa fa-globe"></i></a>
-              </div>
-            </div>
+    <div class="row portfolio-row">
+      <div class="col portfolio-col">
+        <div class="portfolio-wrap">
+          <img src="assets/images/tlatoa.png" alt="Tlatoa">
+          <div class="portfolio-info">
+            Tlatoa
           </div>
+          <div class="portfolio-links">
+            <a href="https://play.google.com/store/apps/details?id=com.developersmix.tlatoa">
+              <i class="fa fa-android"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-          <div class="col portfolio-col">
-            <div class="portfolio-wrap">
-              <img src="assets/images/kis.png" alt="">
-              <div class="portfolio-links">
-                <a href="https://play.google.com/store/apps/details?id=com.developersmix.kis">
-                  <i class="fa fa-android"></i>
-                </a>
-              </div>
-              <div class="portfolio-info">
-                Keep Info Secure
-              </div>
-            </div>
+      <div class="col portfolio-col">
+        <div class="portfolio-wrap">
+          <img src="assets/images/kis.png" alt="">
+          <div class="portfolio-links">
+            <a href="https://play.google.com/store/apps/details?id=com.developersmix.kis">
+              <i class="fa fa-android"></i>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            Keep Info Secure
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row portfolio-row">
+      <div class="col portfolio-col">
+        <div class="portfolio-wrap">
+          <img src="assets/images/acquisition.png" alt="Acquisition">
+          <div class="portfolio-info">
+            Acquisition
+          </div>
+          <div class="portfolio-links">
+            <a href="http://acquisition.developersmix.com">
+              <i class="fa fa-globe"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col portfolio-col">
+        <div class="portfolio-wrap">
+          <img src="assets/images/incidencias.png" alt="ControlIncidencias">
+          <div class="portfolio-links">
+            <a href="http://incidencias.developersmix.com">
+              <i class="fa fa-globe"></i>
+            </a>
+          </div>
+          <div class="portfolio-info">
+            Control Incidencias
           </div>
         </div>
       </div>

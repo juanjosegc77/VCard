@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,11 +13,22 @@ export class AppComponent implements OnInit {
   show_more_about_me: boolean = false;
   year = new Date().getFullYear();
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
 
   }
 
   ngOnInit(): void {
+  }
+
+  downloadResume() {
+    let file_name = "Resume_Juan_Jose_Guzman.pdf"
+    let file_path = "assets/guzman_juan_resume.pdf";
+    var element = document.createElement('a');
+    element.setAttribute("href", file_path);
+    element.setAttribute("download", file_name);
+    element.style.display = 'none';
+    element.click();
+    element.remove();
   }
 
   showMoreAboutMe() {
